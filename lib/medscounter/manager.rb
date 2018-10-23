@@ -1,6 +1,5 @@
 module MedsCounter
   class Manager
-    @@pills_by_day = { keppra250: 4, keppra750: 2, depakene250: 2, zodel: 1 }
 
     def track(medication)
       meds_list << medication
