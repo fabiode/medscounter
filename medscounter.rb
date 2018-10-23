@@ -1,4 +1,4 @@
-require 'rails'
+require 'active_support/time'
 require 'tty-prompt'
 
 class Medication
@@ -33,7 +33,7 @@ prompt = TTY::Prompt.new
 
 result = prompt.collect do
   medication_manager.pills_names.each do |pill_name|
-   key(pill_name).ask("Amount of #{pill_name.to_s}:", convert: :int)
+    key(pill_name).ask("Amount of #{pill_name.to_s}:", convert: :int)
   end
 end
 
